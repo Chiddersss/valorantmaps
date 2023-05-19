@@ -29,8 +29,7 @@ function App() {
           key={agent.uuid}
           className="agent-card"
           style={{
-            background: `url(${agent.fullPortrait}) center/cover, url(${agent.background}) center/cover`,
-            backgroundSize: '110%',
+            backgroundImage: `url(${agent.background})`,
           }}
         >
           <div className="agent-info-overlay">
@@ -46,6 +45,7 @@ function App() {
               ))}
             </ul>
           </div>
+          <div className="agent-img" style={{ backgroundImage: `url(${agent.fullPortrait})` }} />
         </div>
       ))}
     </div>

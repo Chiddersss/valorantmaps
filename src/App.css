@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(235, 86, 91);
+}
+
 .agent-cards-container {
   display: flex;
   justify-content: space-around;
@@ -9,9 +13,8 @@
 .agent-card {
   position: relative;
   margin: 10px;
-  width: calc(33.33% - 6.67px);
-  height: 0;
-  padding-bottom: calc(33.33% - 6.67px);
+  width: 250px; /* Adjust the width as needed */
+  height: 250px; /* Adjust the height as needed */
   background-color: rgb(235, 86, 91);
   border-radius: 10px;
   overflow: hidden;
@@ -20,13 +23,14 @@
 }
 
 .agent-card .agent-img {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-color: #008080;
 }
 
 .agent-card:hover {
@@ -35,7 +39,9 @@
 
 .agent-card .agent-info-overlay {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -47,7 +53,7 @@
   transition: transform 0.2s ease-in-out;
 }
 
-.agent-card .agent-info-overlay h2 {
+.agent-card .agent-info-overlay .agent-name {
   margin: 0;
   font-size: 1.2rem;
   font-weight: 500;
@@ -56,12 +62,6 @@
 
 .agent-card:hover .agent-info-overlay {
   transform: translateY(0);
-}
-
-.agent-card h2 {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: 500;
 }
 
 .agent-card ul {
@@ -74,12 +74,6 @@
 .agent-card ul li {
   margin: 0;
   padding: 0;
-}
-
-.agent-name {
-  display: flex;
-  align-content: center;
-  padding: 10px;
 }
 
 .ability-name {
