@@ -33,7 +33,8 @@ function App() {
             <ul>
               {agent.abilities.map((ability) => (
                 <li key={ability.slot}>
-                  {ability.displayName} - {ability.description}
+                  {ability.displayName} - 
+                  {ability.description}
                 </li>
               ))}
             </ul>
