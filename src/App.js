@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './App.css'; // Import a CSS file to style the agent cards
+import './App.css'; 
 
 function App() {
   const [agents, setAgents] = useState([]);
@@ -25,7 +25,7 @@ function App() {
           className="agent-card"
           style={{
             background: `url(${agent.fullPortrait}) center/cover, url(${agent.background}) center/cover`,
-            backgroundSize: '110%', // set background size to a larger value
+            backgroundSize: '110%', 
           }}
         >
           <div className="agent-info-overlay">
